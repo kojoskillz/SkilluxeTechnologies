@@ -12,15 +12,15 @@ const FAQ = () => {
   return (
     <div className='bg-black'>
           <div className='m-auto place-content-center'>
-              <h1 className='text-center text-white lg:text-5xl font-bold '>
+              <h1 className='text-center text-4xl p-2 text-white lg:text-5xl font-bold '>
                  Frequently asked questions
               </h1>
-              <h2 className='text-center text-white text-xl font-semibold  '>
+              <h2 className='text-center text-white text-2xl lg:text-xl p-2 font-semibold  '>
                  Answers to your questions about us
               </h2>
           </div>
 
-    <Accordion type="single" collapsible className="w-[42rem] m-auto place-content-center">
+    <Accordion type="single" collapsible className="lg:w-[42rem] w-[23rem] m-auto mb-[-5rem] place-content-center">
       <AccordionItem value="item-1">
         <AccordionTrigger className='text-white'>What services does your web agency offer?</AccordionTrigger>
         <AccordionContent className='text-white/80'>
