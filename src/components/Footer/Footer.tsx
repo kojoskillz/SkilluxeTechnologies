@@ -6,7 +6,7 @@ export function WorldMapDemo() {
   return (
     <div className=" lg:py-40 lg:h-[12rem] bg-black w-full">
       <div className="max-w-7xl bg-black mx-auto text-center">
-        <p className="font-bold text-xl md:text-4xl dark:text-white text-white">
+        <p className="font-bold pt-[10rem] text-2xl md:text-4xl dark:text-white text-white">
           GET IN TOUCH WITH SKILL{""}
           <span className="text-blue-600">
             {"UXE".split("").map((word, idx) => (
@@ -22,9 +22,9 @@ export function WorldMapDemo() {
             ))}
           </span>
         </p>
-        <p className="text-sm md:text-lg text-white max-w-2xl mx-auto py-4">
-        Ready to bring your digital vision to life? Our expert team is here to help you unleash your
-         brand&apos;s full potential and make a lasting impact in the digital world.
+        <p className="text-md md:text-lg text-white max-w-2xl mx-auto py-4">
+            Ready to bring your digital vision to life? Our expert team is here to help you unleash your
+            brand&apos;s full potential and make a lasting impact in the digital world.
         </p>
       </div>
       <WorldMap
