@@ -94,7 +94,7 @@ export default function WorldMap({
                       </h1>
                       
                           <button className="bg-blue-600 p-4 hover:bg-white hover:text-blue-600 cursor-pointer rounded-2xl text-xl  mt-2 w-[16rem] text-white">
-                           <a href="+233541833813">  Call Now</a> 
+                           <a href="tel:+233541833813">  Call Now</a> 
                          </button>
                     
                     
