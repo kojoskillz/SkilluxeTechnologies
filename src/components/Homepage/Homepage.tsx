@@ -6,7 +6,7 @@ import { DotPattern } from "../magicui/dot-pattern";
 import { PulsatingButton } from "../magicui/pulsating-button";
 import ColourfulText from "@/components/ui/colourful-text";
 
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
 
 
 import React from 'react'
