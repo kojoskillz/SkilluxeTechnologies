@@ -19,7 +19,9 @@ const Projects = () => {
 
           {/* images for projects */}
           <div className='grid lg:grid-cols-2 gap-y-10 lg:mt-[3rem] lg:m-[10rem] m-5 place-content-center' >
-          <GridPattern
+     
+<div>
+{/* <GridPattern
                           width={50}
                           height={50}
                           x={-1}
@@ -28,7 +30,9 @@ const Projects = () => {
                           className={cn(
                               "[mask-image:radial-gradient(600px_circle_at_center,black,transparent)]",
                           )}
-                          />
+                          /> */}
+</div>
+
             <div className='m-auto place-content-center'>
                   <Image
                         src="/imga.jpg"
