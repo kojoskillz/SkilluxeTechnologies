@@ -90,7 +90,7 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <li
             className="w-[350px]  max-w-full relative rounded-2xl shrink-0  px-8 py-6 md:w-[450px]"
             style={{
@@ -110,6 +110,7 @@ export const InfiniteMovingCards = ({
                            "[mask-image:radial-gradient(150px_circle_at_center,white,transparent)]",
                        )}
                        />
+                       
               <div
                 aria-hidden="true"
                 className="user-select-none bg-slate-900/30 rounded-3xl -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
