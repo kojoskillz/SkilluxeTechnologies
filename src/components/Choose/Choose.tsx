@@ -27,7 +27,7 @@ export default function Choose() {
           <h2 className="text-left text-balance text-5xl md:text-2xl lg:text-7xl font-semibold tracking-[-0.015em] text-white">
             120+ Projects
           </h2>
-          <p className="mt-4 text-left  lg:text-base/6 text-3xl text-neutral-200">
+          <p className="mt-4 text-left  lg:text-base/6 text-xl text-neutral-200">
              Over 400 successful projects delivered to our clients worldwide
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function Choose() {
         <h2 className="max-w-80  text-left text-balance text-5xl md:text-xl lg:text-6xl font-semibold tracking-[-0.015em] text-white">
           30 Awards
         </h2>
-        <p className="mt-4 max-w-[26rem] text-left  text-2xl lg:text-base/6 text-neutral-200">
+        <p className="mt-4 max-w-[26rem] text-left  text-xl lg:text-base/6 text-neutral-200">
           Our outstanding work has earned us prestigious global awards and recognition. Our dedication to excellence, innovation, and creativity sets us apart, and we are honored to be
           celebrated on the world stage for our achievements
         </p>
