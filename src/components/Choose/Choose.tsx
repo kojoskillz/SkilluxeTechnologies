@@ -24,10 +24,10 @@ export default function Choose() {
         className=""
       >
         <div className="max-w-xs">
-          <h2 className="text-left text-balance text-base md:text-2xl lg:text-6xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="text-left text-balance text-5xl md:text-2xl lg:text-7xl font-semibold tracking-[-0.015em] text-white">
             120+ Projects
           </h2>
-          <p className="mt-4 text-left  text-base/6 text-neutral-200">
+          <p className="mt-4 text-left  lg:text-base/6 text-3xl text-neutral-200">
              Over 400 successful projects delivered to our clients worldwide
           </p>
         </div>
@@ -40,21 +40,21 @@ export default function Choose() {
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-6xl font-semibold tracking-[-0.015em] text-white">
+        <h2 className="max-w-80  text-left text-balance text-5xl md:text-xl lg:text-6xl font-semibold tracking-[-0.015em] text-white">
           30 Awards
         </h2>
-        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+        <p className="mt-4 max-w-[26rem] text-left  text-2xl lg:text-base/6 text-neutral-200">
           Our outstanding work has earned us prestigious global awards and recognition. Our dedication to excellence, innovation, and creativity sets us apart, and we are honored to be
           celebrated on the world stage for our achievements
         </p>
       </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
-        <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg lg:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+      <WobbleCard containerClassName="col-span-1 lg:3xl text-xl lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+        <div className="lg:max-w-lg max-w-sm mt-[-3rem]">
+          <h2 className="lg:max-w-lg max-w-sm text:2xl md:max-w-lg lg:max-w-lg text-left md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
               Discover the future with our cutting-edge services! As a top web agency, we elevate your digital presence and performance. Sign up today and experience the difference!
           </h2>
-          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-           Boasting a 98% satisfaction rate across all our consulting services, we consistently deliver excellence and exceed expectations.
+          <p className="mt-4 max-w-[26rem] text-[16px] text-left lg:text-base/6 text-neutral-200">
+              Boasting a 98% satisfaction rate across all our consulting services, we consistently deliver excellence and exceed expectations.
           </p>
         </div>
         <Image
@@ -62,7 +62,7 @@ export default function Choose() {
           width={500}
           height={600}
           alt="linear demo image"
-          className="absolute -right-10 md:-right-[40%] lg:right-[3rem] -bottom-10 object-contain rounded-2xl"
+          className="absolute -right-10 md:-right-[40%] lg:right-[3rem] h-[35rem] w-[40rem] mt-[-7rem] lg:-bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
     </div>
