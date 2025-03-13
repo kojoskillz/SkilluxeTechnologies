@@ -46,7 +46,7 @@ export default function WorldMap({
   };
 
   return (
-    <div className="w-full aspect-[2/1] dark:bg-black bg-black relative font-sans">
+    <div className="w-full aspect-[2/1] pt-[-20rem] dark:bg-black bg-black relative font-sans">
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="h-[40rem] w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
@@ -71,19 +71,19 @@ export default function WorldMap({
               </h1>
 
          </div>
-          <div className="flex gap-x-10">
+          <div className="lg:flex grid gap-x-10">
               <h1 className="text-white text-sm mt-3 max-w-[30rem] text-wrap ">
                       <b>Transform Your Business Idea into Reality with Our Top-Rated Web Agency.</b>
                       Turn your innovative idea to life with our expert web development, e-commerce solutions,
                       mobile app development, and digital marketing services. 
                   </h1>
 
-                  <div className="lg:flex grid text-4xl text-wrap uppercase gap-2 font-bold">
+                  <div className="lg:flex grid lg:text-4xl text-2xl text-wrap uppercase gap-2 font-bold">
                         <h1 className="text-white">Join The </h1>
-                        <h2 className="text-white text-4xl font-bold">
-                          SKILL<span className="text-blue-500">UXE </span>
+                        <h2 className="text-white lg:text-4xl text-2xl font-bold">
+                          SKILL<span className="text-blue-500">UXE<br /> </span>
                         </h2> 
-                        <h2 className="text-white text-4xl">
+                        <h2 className="text-white lg:text-4xl text-2xl">
                           REVOLUTION
                         </h2>
                   </div>
