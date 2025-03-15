@@ -40,7 +40,7 @@ export default function Choose() {
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <h2 className="max-w-80  text-left text-balance text-5xl md:text-xl lg:text-6xl font-semibold tracking-[-0.015em] text-white">
+        <h2 className="max-w-80  text-left text-balance text-3xl md:text-xl lg:text-6xl font-semibold tracking-[-0.015em] text-white">
           30 Awards
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-xl lg:text-base/6 text-neutral-200">
@@ -70,12 +70,9 @@ export default function Choose() {
 
           {/* scroll text */}
           <div className="relative lg:mt-20 mt-20 lg:pb-20 pb-20 flex w-full flex-col items-center justify-center overflow-hidden">
-        
                    {/* <VelocityScroll className="bg-white p-4 text-blue-500 ">     
                        WEB AGENCY, DIGITAL SOLUTIONS, WEB DEVELOPMENT, APP DEVELOPMENT, DIGITAL MARKETING, SEO,
                     </VelocityScroll> */}
-
-                 
                 <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-black"></div>
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-black"></div>
             </div>
