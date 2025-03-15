@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import { GridPattern } from "../magicui/grid-pattern";
-import { cn } from "@/lib/utils"
+// import { GridPattern } from "../magicui/grid-pattern";
+// import { cn } from "@/lib/utils"
 
 
 const Projects = () => {
@@ -18,21 +18,21 @@ const Projects = () => {
           </div>
 
           {/* images for projects */}
-          <div className='grid lg:grid-cols-2 gap-y-10 lg:mt-[3rem] lg:m-[10rem] m-5 place-content-center' >
+          <div className=' lg:mt-[3rem] lg:m-[10rem] m-5 place-content-center' >
      
-<div>
-{/* <GridPattern
-                          width={50}
-                          height={50}
-                          x={-1}
-                          y={-1}
-                          strokeDasharray={"4 2"}
-                          className={cn(
-                              "[mask-image:radial-gradient(600px_circle_at_center,black,transparent)]",
-                          )}
-                          /> */}
-</div>
+<div className='grid lg:grid-cols-2 gap-y-10 '>
 
+{/* 
+<GridPattern
+                width={30}
+                height={30}
+                x={-1}
+                y={-1}
+                strokeDasharray={"4 2"}
+                className={cn(
+                    "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
+                )}
+                /> */}
             <div className='m-auto place-content-center'>
                   <Image
                         src="/imga.jpg"
@@ -120,6 +120,7 @@ const Projects = () => {
 
                       
           </div>
+    </div>
     </div>
   )
 }
