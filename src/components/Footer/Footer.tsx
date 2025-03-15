@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 
 export function WorldMapDemo() {
   return (
-    <div className=" lg:py-40 lg:h-[12rem] bg-black w-full">
-      <div className="max-w-7xl bg-black mx-auto text-center">
+    <div className="lg:h-[12rem] h-[60rem] bg-black w-full">
+      <div className=" lg:mt-[-5rem] bg-black w-full mx-auto text-center">
         <p className="font-bold pt-[10rem] text-2xl md:text-4xl dark:text-white text-white">
           GET IN TOUCH WITH SKILL{""}
           <span className="text-blue-600">
@@ -62,7 +62,7 @@ export function WorldMapDemo() {
         ]}
       />
        <div>
-         <h1 className="text-white/60 font-light text-center pb-3  bg-black">
+         <h1 className="text-white/60 font-light text-center pb-3 lg:mt-0 mt-[25rem] bg-black">
            Copyright &copy;Skilluxe 2025, All Right Reserved
          </h1>
       </div>
