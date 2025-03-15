@@ -37,7 +37,7 @@ import Image from "next/image";
 const features = [
   {
     icon: Code,
-    title: "Open source",
+    title: "Services",
     description: "This Pokemon's cry is very loud and distracting",
   },
   {
@@ -179,7 +179,7 @@ export default function Navbar() {
           </div>
 
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="md:hidden bg-white m-1">
               <Button variant="ghost" size="icon">
                 <Menu className="h-5 w-5" />
               </Button>
