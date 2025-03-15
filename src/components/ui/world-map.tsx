@@ -49,7 +49,7 @@ export default function WorldMap({
     <div className="w-full aspect-[2/1] pt-[-20rem] dark:bg-black bg-black relative font-sans">
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="h-[40rem] w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
+        className="lg:h-[40rem] h-[10rem] w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
         alt="world map"
         height="495"
         width="1056"
@@ -57,9 +57,9 @@ export default function WorldMap({
       />
 
       {/* footer section */}
-      <div className="mt-[-15rem] w-full pb-20 p-10 z-50 absolute glass ">
+      <div className="lg:mt-[-14rem] mt-[2rem] lg:h-[20rem] h-[24rem] w-full lg:pb-[-10] pb-20 p-5 lg:p-5 z-50 absolute glass ">
        
-          <div className="flex gap-3">
+          <div className="flex pt-[-2rem] lg:mt-0 gap-3">
           <Image 
                   src="/Skilluxelogo3.png"
                   width={70}
@@ -78,17 +78,14 @@ export default function WorldMap({
                       mobile app development, and digital marketing services. 
                   </h1>
 
-                  <div className="lg:flex grid lg:text-4xl text-2xl text-wrap uppercase gap-2 font-bold">
-                        <h1 className="text-white">Join The </h1>
-                        <h2 className="text-white lg:text-4xl text-2xl font-bold">
-                          SKILL<span className="text-blue-500">UXE<br /> </span>
-                        </h2> 
-                        <h2 className="text-white lg:text-4xl text-2xl">
-                          REVOLUTION
-                        </h2>
+                  <div className="lg:flex flex lg:text-4xl text-xl lg:text-wrap uppercase font-bold">
+                        <h1 className="text-white flex mt-2"> 
+                          Join The Skill <span className="text-blue-500 mr-1">uxe</span>
+                            Revolution
+                         </h1>
                   </div>
 
-                  <div className="grid item-center place-content-center m-auto">
+                  <div className="grid item-center place-content-center  mt-8 lg:mt-0 m-auto">
                       <h1 className="text-white font-bold text-3xl m-auto">
                         Contact Us Now
                       </h1>
