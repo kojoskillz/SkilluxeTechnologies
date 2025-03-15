@@ -20,7 +20,7 @@ const Projects = () => {
           {/* images for projects */}
           <div className=' lg:mt-[3rem] lg:m-[10rem] m-5 place-content-center' >
      
-<div className='grid lg:grid-cols-2 gap-y-10 '>
+<div className='grid lg:grid-cols-2 gap-y-14 gap-x-10'>
 
 {/* 
 <GridPattern
@@ -35,84 +35,89 @@ const Projects = () => {
                 /> */}
             <div className='m-auto place-content-center'>
                   <Image
-                        src="/imga.jpg"
+                        src="/imga.png"
                         width={500}
                         height={600}
-                        alt="linear demo image"
+                        alt=""
                         className="object-cover rounded-2xl h-[30rem] w-[35rem] "
                       />
                      <div className='mt-4'>
-                          <h1 className='text-white text-left font-bold text-xl'>
-                              Digital Agency
+                          <h1 className='text-white uppercase text-left font-bold text-xl'>
+                               modus light
                           </h1>
                           <p className='text-gray-200 text-wrap'>
-                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque vitae  Soluta doloremque vitae 
+                             Modus Light is a modern and sleek lighting solution designed to enhance your office space. Its slim and minimalist
+                           profile seamlessly integrates into any workspace, providing bright and energy-efficient illumination.
                           </p>
                           <button className='text-blue-500 bg-white rounded-md w-[8rem] mt-2 p-2 cursor-pointer hover:translate-y-2 '>
-                              Live Preview
+                             <a href="https://modus-light-free.webflow.io">Live Preview</a> 
                           </button>
                       </div>
             </div>
               
             <div className='m-auto place-content-center'>
                   <Image
-                        src="/imgb.jpg"
+                        src="/imgb.png"
                         width={500}
                         height={600}
                         alt="linear demo image"
                         className="object-cover rounded-2xl h-[30rem] w-[35rem] "
                       />
                        <div className='mt-4'>
-                          <h1 className='text-white text-left font-bold text-xl'>
-                              Digital Agency
+                          <h1 className='text-white uppercase text-left font-bold text-xl'>
+                              home ifye
                           </h1>
                           <p className='text-gray-200 text-wrap'>
-                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque vitae  Soluta doloremque vitae 
+                            Home Ife is a reputable real estate company dedicated to providing exceptional services to individuals 
+                            and families seeking their dream homes. With a focus on quality, affordability, and customer satisfaction,
+                            Home Ife strives to make the home-buying process seamless and enjoyable.
                           </p>
                           <button className='text-blue-500 bg-white rounded-md w-[8rem] mt-2 p-2 cursor-pointer hover:translate-y-2 '>
-                              Live Preview
+                            <a href="https://homeifye-free.webflow.io">Live Preview</a>  
                           </button>
                       </div>
             </div>
               
             <div className='m-auto place-content-center'>
                   <Image
-                        src="/imgc.webp"
+                        src="/imgc.png"
                         width={500}
                         height={600}
-                        alt="linear demo image"
+                        alt="wealth bento"
                         className="object-cover rounded-2xl h-[30rem] w-[35rem] "
                       />
                       <div className='mt-4'>
-                          <h1 className='text-white text-left font-bold text-xl'>
-                              Digital Agency
+                          <h1 className='text-white uppercase text-left font-bold text-xl'>
+                              wealth bento
                           </h1>
                           <p className='text-gray-200 text-wrap'>
-                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque vitae  Soluta doloremque vitae 
+                                Wealth Bento is an innovative online platform designed to help you manage your finances effectively. This digital "purse&quot; 
+                                allows you to track your income and expenses, set budgeting goals, and make informed financial decisions.
                           </p>
                           <button className='text-blue-500 bg-white rounded-md w-[8rem] mt-2 p-2 cursor-pointer hover:translate-y-2 '>
-                              Live Preview
+                              <a href="https://wealth-bento-webflow-template.webflow.io">Live Preview</a>
                           </button>
                       </div>
             </div>
-              
+                                                                                                
             <div className='m-auto place-content-center'>
                   <Image
                         src="/imgd.png"
                         width={500}
                         height={600}
-                        alt="linear demo image"
+                        alt=""
                         className="object-cover rounded-2xl h-[30rem] w-[35rem] "
                       />
-                        <div className='mt-4'>
-                          <h1 className='text-white text-left font-bold text-xl'>
-                              Digital Agency
+                     <div className='mt-4'>
+                          <h1 className='text-white uppercase text-left font-bold text-xl'>
+                               food fantasy
                           </h1>
                           <p className='text-gray-200 text-wrap'>
-                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloremque vitae  Soluta doloremque vitae 
+                          Food Fantasy is a revolutionary online food ordering platform that brings your favorite dishes right to your doorstep. With a vast network of partner restaurants 
+                          and a user-friendly interface, Food Fantasy makes it easy to indulge in your culinary cravings.
                           </p>
                           <button className='text-blue-500 bg-white rounded-md w-[8rem] mt-2 p-2 cursor-pointer hover:translate-y-2 '>
-                              Live Preview
+                             <a href="https://food-fantasy.webflow.io">Live Preview </a> 
                           </button>
                       </div>
             </div>
