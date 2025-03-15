@@ -147,10 +147,10 @@ export function MagicCardDemo() {
                 </MagicCard>
                 <Image
                              src="/img0.png"
-                             width={200}
-                             height={200}
+                             width={300}
+                             height={900}
                              alt="linear demo image"
-                             className="absolute w-[732px] h-[52rem] mt-[-5.5rem] ml-[-3rem] lg:w-[50rem] lg:h-[25rem] lg:mt-[8.5rem]  lg:ml-[-10rem] object-contain "
+                             className="lg:absolute relative w-[100rem] h-[300rem] rounded-b-2xl z-40  mb-[-1.5rem] mt-[-3rem] lg:w-[50rem] lg:h-[25rem] lg:mt-[8.5rem] lg:ml-[-10rem] lg:object-contain  object-cover fit-content"
                            />
             </Card>
 
