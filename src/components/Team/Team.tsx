@@ -19,7 +19,7 @@ const Team = () => {
                         "[mask-image:radial-gradient(600px_circle_at_center,black,transparent)]",
                     )}
                     />
-        <div className='bg-white p-5 rounded-[5rem]'>
+        <div className='bg-white lg:p-5 p-1 w-[20rem] item-center place-content-center  m:auto lg:m-auto lg:w-[85rem] rounded-[5rem]'>
      
          <h1 className='font-bold p-5 text-4xl lg:text-[4rem] text-center '> 
             <br /> <ColourfulText text="Meet The  Creative Team" />   
@@ -33,7 +33,7 @@ const Team = () => {
        <div className='lg:flex grid gap-2 m-auto place-content-center'>
             <div className='p-5 z-50'>
                     <Image
-                        src="/propic2.jpg"
+                        src="/propic2.png"
                         width={500}
                         height={400}
                         alt="linear demo image"
@@ -69,7 +69,7 @@ const Team = () => {
 
             <div className='p-5 z-50 rounded-2xl'>
                     <Image
-                        src="/propic3.jpg"
+                        src="/propic3.png"
                         width={460}
                         height={500}
                         alt="linear demo image"
@@ -77,10 +77,10 @@ const Team = () => {
                         />
                         <div className='text-center mt-4 uppercase '>
                             <h1 className='text-gray-800 font-bold font-sans text-md lg:text-2xl '>
-                                Ebenezer Kofi Amoh
+                                Rahul Dev
                             </h1>
                             <h3 className='text-gray-400 font-semibold text-md lg:text-sm '>
-                                
+                                 Fullstack Developer
                             </h3>
                         </div>
             </div>
