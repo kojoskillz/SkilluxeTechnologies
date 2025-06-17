@@ -26,44 +26,41 @@ import {
   Fingerprint,
   Bell,
   Menu,
-//   X,
+  ChevronDown,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-
-
 
 const features = [
   {
     icon: Code,
     title: "Services",
-    description: "This Pokemon's cry is very loud and distracting",
+    description: "Explore our comprehensive service offerings.",
   },
   {
     icon: DollarSign,
-    title: "Free for everyone",
-    description: "The fluid of Smeargle's tail secretions changes",
+    title: "Pricing",
+    description: "Discover our flexible and affordable plans.",
   },
   {
     icon: Book,
     title: "Documentation",
-    description: "Yanma is capable of seeing 360 degrees without",
+    description: "Access guides and API references for developers.",
   },
   {
     icon: Fingerprint,
     title: "Security",
-    description: "The shell's rounded shape and the grooves on its",
+    description: "Learn about our robust security measures.",
   },
   {
     icon: PieChart,
     title: "Analytics",
-    description: "This Pokémon uses its flying ability to quickly chase",
+    description: "Gain insights with powerful data analytics.",
   },
   {
     icon: Bell,
     title: "Notifications",
-    description: "Combusken battles with the intensely hot flames it spews",
+    description: "Stay updated with real-time alerts.",
   },
 ];
 
@@ -72,29 +69,29 @@ export default function Navbar() {
   const [showFeatures, setShowFeatures] = React.useState(false);
 
   return (
-    <div className="bg-black">
-      <header className="sticky top-0 z-50 w-full  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container bg-black flex h-14 items-center justify-between">
+    <div className="bg-black w-full overflow-x-hidden">
+      <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="w-full bg-black flex h-14 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-4">
-            <Link href={"/"} className="flex items-center space-x-2">
-            
-                <div className="p-1">
-                   <Image 
-                                  src="/Skilluxelogo3.png"
-                                  width={40}
-                                  height={40} alt={""}                 
-                                         />
-                </div>
-                <h1 className="text-white text-xl font-bold">
-                  SKILL<span className="text-blue-500">UXE</span>
-                </h1> 
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="p-1">
+                <Image
+                  src="/Skilluxelogo3.png"
+                  width={40}
+                  height={40}
+                  alt="Skilluxe Logo"
+                />
+              </div>
+              <span className="text-white text-xl font-bold whitespace-nowrap">
+                SKILL<span className="text-blue-500">UXE</span>
+              </span>
             </Link>
 
             <NavigationMenu className="hidden md:flex">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink className=" group text-white inline-flex h-9 w-max items-center justify-center rounded-md bg-black px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                  <Link href="/" passHref legacyBehavior>
+                    <NavigationMenuLink className="group text-white inline-flex h-9 w-max items-center justify-center rounded-md bg-black px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                       Home
                     </NavigationMenuLink>
                   </Link>
@@ -103,9 +100,9 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-[600px]  p-4">
-                      <div className="flex items-center justify-between mb-4 pb-2 hover:rounded-lg border-b">
-                        <h4 className="text-lg font-medium ">Services</h4>
+                    <div className="w-[600px] p-4">
+                      <div className="flex items-center justify-between mb-4 pb-2 border-b">
+                        <h4 className="text-lg font-medium">Services</h4>
                         <Link
                           href="/features"
                           className="text-sm text-blue-500 hover:underline"
@@ -143,8 +140,7 @@ export default function Navbar() {
                           <div>
                             <h4 className="font-medium mb-1">Get started</h4>
                             <p className="text-sm text-muted-foreground">
-                              Their food sources have decreased, and their
-                              numbers
+                              Ready to start your journey with us?
                             </p>
                           </div>
                           <Button variant="secondary">Get started</Button>
@@ -155,16 +151,16 @@ export default function Navbar() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/learn" legacyBehavior passHref>
-                    <NavigationMenuLink className="bg-black group inline-flex h-9 w-max items-center justify-center rounded-md text-white px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                       About Us
+                  <Link href="/about" passHref legacyBehavior>
+                    <NavigationMenuLink className="bg-black group inline-flex h-9 w-max items-center justify-center rounded-md text-white px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
+                      About Us
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/academy" legacyBehavior passHref>
-                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md text-white bg-black px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                  <Link href="/features-page" passHref legacyBehavior>
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md text-white bg-black px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
                       Features
                     </NavigationMenuLink>
                   </Link>
@@ -173,9 +169,13 @@ export default function Navbar() {
             </NavigationMenu>
           </div>
 
-          <div className="hidden md:flex  mr-[2rem] items-center space-x-4">
-            <Button variant="ghost" className="text-white bg-transparent"> Contact Us </Button>
-            <Button className="bg-white text-black hover:bg-white/70 ">Sign up</Button>
+          <div className="hidden md:flex items-center space-x-4">
+            <Button variant="ghost" className="text-white bg-transparent">
+              Contact Us
+            </Button>
+            <Button className="bg-white text-black hover:bg-white/70">
+              Sign up
+            </Button>
           </div>
 
           <Sheet open={open} onOpenChange={setOpen}>
@@ -184,7 +184,7 @@ export default function Navbar() {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-full p-0">
+            <SheetContent side="left" className="w-full max-w-screen overflow-x-hidden p-0">
               <SheetHeader className="border-b p-4">
                 <SheetTitle className="text-left">Navigation</SheetTitle>
               </SheetHeader>
@@ -200,7 +200,7 @@ export default function Navbar() {
                   className="flex items-center justify-between px-4 py-2 text-lg font-medium hover:bg-accent text-left"
                   onClick={() => setShowFeatures(!showFeatures)}
                 >
-                  Features
+                  Services
                   <ChevronDown
                     className={cn(
                       "h-5 w-5 transition-transform",
@@ -223,7 +223,9 @@ export default function Navbar() {
                           <feature.icon className="h-6 w-6 text-blue-500" />
                         </div>
                         <div>
-                          <h5 className="font-medium mb-1">{feature.title}</h5>
+                          <h5 className="font-medium mb-1">
+                            {feature.title}
+                          </h5>
                           <p className="text-sm text-muted-foreground">
                             {feature.description}
                           </p>
@@ -233,18 +235,18 @@ export default function Navbar() {
                   </div>
                 )}
                 <Link
-                  href="/learn"
+                  href="/about"
                   className="px-4 py-2 text-lg font-medium hover:bg-accent"
                   onClick={() => setOpen(false)}
                 >
-                  Learn
+                  About Us
                 </Link>
                 <Link
-                  href="/academy"
+                  href="/features-page"
                   className="px-4 py-2 text-lg font-medium hover:bg-accent"
                   onClick={() => setOpen(false)}
                 >
-                  Academy
+                  Features
                 </Link>
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-4 border-t bg-background">
