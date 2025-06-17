@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import DottedMap from "dotted-map";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { PhoneCall } from "lucide-react";
 
 interface MapProps {
   dots?: Array<{
@@ -20,14 +21,13 @@ export default function WorldMap({
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const map = new DottedMap({ height: 100, grid: "diagonal" });
-
   const { theme } = useTheme();
 
   const svgMap = map.getSVG({
     radius: 0.22,
     color: theme === "dark" ? "#000000FF" : "#1D1083FF",
     shape: "circle",
-    backgroundColor: theme === "dark" ? "black" : "black",
+    backgroundColor: "black",
   });
 
   const projectPoint = (lat: number, lng: number) => {
@@ -46,91 +46,86 @@ export default function WorldMap({
   };
 
   return (
-    <div className="w-full aspect-[2/1] pt-[-20rem] dark:bg-black bg-black relative font-sans">
+    <div className="relative w-full aspect-[2/1] bg-black font-sans overflow-hidden">
+      {/* World Map */}
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="lg:h-[40rem] h-[10rem] w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
-        alt="world map"
-        height="495"
-        width="1056"
+        alt="World Map"
+        width={1056}
+        height={495}
+        className="w-full h-auto pointer-events-none select-none [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)]"
         draggable={false}
       />
 
-      {/* footer section */}
-      <div className="lg:mt-[-14rem] mt-[2rem] lg:h-[20rem] h-[24rem] w-full lg:pb-[-10] pb-20 p-5 lg:p-5 z-50 absolute glass ">
-       
-          <div className="flex pt-[-2rem] lg:mt-0 gap-3">
-          <Image 
-                  src="/Skilluxelogo3.png"
-                  width={70}
-                  height={70} alt={""}   
-                  className=""               
+      {/* Glassy Overlay */}
+      <div className="absolute bottom-0 inset-x-0 z-50 px-6 py-10 lg:px-20 bg-white/5 backdrop-blur-md rounded-t-3xl border-t border-white/10 shadow-2xl">
+        <div className="grid lg:grid-cols-3 gap-8 text-white items-center text-center lg:text-left">
+          {/* Logo and Title */}
+          <div className="flex flex-col items-center lg:items-start gap-4">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/Skilluxelogo3.png"
+                width={50}
+                height={50}
+                alt="Logo"
+                className="rounded-full shadow-md"
               />
-              <h1 className="text-white lg:text-3xl gap-4 item-center place-content-center  text-xl font-extrabold">
-                 SKILL<span className="text-blue-500">UXE</span>
+              <h1 className="text-2xl font-extrabold tracking-wide">
+                SKILL<span className="text-blue-500">UXE</span>
               </h1>
-
-         </div>
-          <div className="lg:flex grid gap-x-10">
-              <h1 className="text-white text-sm mt-3 max-w-[30rem] text-wrap ">
-                      <b>Transform Your Business Idea into Reality with Our Top-Rated Web Agency.</b>
-                      Turn your innovative idea to life with our expert web development, e-commerce solutions,
-                      mobile app development, and digital marketing services. 
-                  </h1>
-
-                  <div className="lg:flex flex lg:text-4xl text-xl lg:text-wrap uppercase font-bold">
-                        <h1 className="text-white flex mt-2"> 
-                          Join The Skill <span className="text-blue-500 mr-1">uxe</span>
-                            Revolution
-                         </h1>
-                  </div>
-
-                  <div className="grid item-center place-content-center  mt-8 lg:mt-0 m-auto">
-                      <h1 className="text-white font-bold text-3xl m-auto">
-                        Contact Us Now
-                      </h1>
-                      
-                          <button className="bg-blue-600 p-4 hover:bg-white hover:text-blue-600 cursor-pointer rounded-2xl text-xl  mt-2 w-[16rem] text-white">
-                           <a href="tel:+233541833813">  Call Now</a> 
-                         </button>
-                    
-                    
-                  </div>
-
-
             </div>
-    
+            <p className="text-sm text-white/80 leading-relaxed max-w-sm">
+              <strong>Bring your idea to life.</strong> We craft websites,
+              e-commerce platforms, mobile apps, and digital growth strategies
+              for your success.
+            </p>
+          </div>
+
+          {/* Animated Slogan */}
+          <div className="text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-xl lg:text-2xl font-bold uppercase tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-white"
+            >
+              JOINTHESKILLUXEREVOLUTION
+            </motion.h2>
+          </div>
+
+          {/* Call to Action */}
+          <div className="flex flex-col items-center gap-3">
+            <h3 className="text-lg font-bold">Ready to start?</h3>
+            <a
+              href="tel:+233541833813"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl flex items-center gap-2 text-base font-semibold shadow-lg hover:shadow-xl transition"
+            >
+              <PhoneCall className="w-5 h-5" /> Call Now
+            </a>
+          </div>
+        </div>
       </div>
-     
+
+      {/* Animated Lines + Dots */}
       <svg
         ref={svgRef}
         viewBox="0 0 800 400"
         className="w-full h-full absolute inset-0 pointer-events-none select-none"
       >
         {dots.map((dot, i) => {
-          const startPoint = projectPoint(dot.start.lat, dot.start.lng);
-          const endPoint = projectPoint(dot.end.lat, dot.end.lng);
+          const start = projectPoint(dot.start.lat, dot.start.lng);
+          const end = projectPoint(dot.end.lat, dot.end.lng);
           return (
-            <g key={`path-group-${i}`}>
-              <motion.path
-                d={createCurvedPath(startPoint, endPoint)}
-                fill="none"
-                stroke="url(#path-gradient)"
-                strokeWidth="1"
-                initial={{
-                  pathLength: 0,
-                }}
-                animate={{
-                  pathLength: 1,
-                }}
-                transition={{
-                  duration: 1,
-                  delay: 0.5 * i,
-                  ease: "easeOut",
-                }}
-                key={`start-upper-${i}`}
-              ></motion.path>
-            </g>
+            <motion.path
+              key={i}
+              d={createCurvedPath(start, end)}
+              fill="none"
+              stroke="url(#path-gradient)"
+              strokeWidth="1"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, delay: 0.5 * i }}
+            />
           );
         })}
 
@@ -144,71 +139,33 @@ export default function WorldMap({
         </defs>
 
         {dots.map((dot, i) => (
-          <g key={`points-group-${i}`}>
-            <g key={`start-${i}`}>
-              <circle
-                cx={projectPoint(dot.start.lat, dot.start.lng).x}
-                cy={projectPoint(dot.start.lat, dot.start.lng).y}
-                r="2"
-                fill={lineColor}
-              />
-              <circle
-                cx={projectPoint(dot.start.lat, dot.start.lng).x}
-                cy={projectPoint(dot.start.lat, dot.start.lng).y}
-                r="2"
-                fill={lineColor}
-                opacity="0.5"
-              >
-                <animate
-                  attributeName="r"
-                  from="2"
-                  to="8"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  from="0.5"
-                  to="0"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-            </g>
-            <g key={`end-${i}`}>
-              <circle
-                cx={projectPoint(dot.end.lat, dot.end.lng).x}
-                cy={projectPoint(dot.end.lat, dot.end.lng).y}
-                r="2"
-                fill={lineColor}
-              />
-              <circle
-                cx={projectPoint(dot.end.lat, dot.end.lng).x}
-                cy={projectPoint(dot.end.lat, dot.end.lng).y}
-                r="2"
-                fill={lineColor}
-                opacity="0.5"
-              >
-                <animate
-                  attributeName="r"
-                  from="2"
-                  to="8"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  from="0.5"
-                  to="0"
-                  dur="1.5s"
-                  begin="0s"
-                  repeatCount="indefinite"
-                />
-              </circle>
-            </g>
+          <g key={i}>
+            {[dot.start, dot.end].map((point, idx) => {
+              const { x, y } = projectPoint(point.lat, point.lng);
+              return (
+                <g key={`${i}-${idx}`}>
+                  <circle cx={x} cy={y} r="2" fill={lineColor} />
+                  <circle cx={x} cy={y} r="2" fill={lineColor} opacity="0.5">
+                    <animate
+                      attributeName="r"
+                      from="2"
+                      to="8"
+                      dur="1.5s"
+                      begin="0s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      from="0.5"
+                      to="0"
+                      dur="1.5s"
+                      begin="0s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                </g>
+              );
+            })}
           </g>
         ))}
       </svg>
