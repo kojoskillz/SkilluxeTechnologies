@@ -1,10 +1,29 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import WorldMap from "@/components/ui/world-map";
 import { motion } from "motion/react";
+import { ArrowUp } from "lucide-react";
 
 export function WorldMapDemo() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const halfway = window.innerHeight / 2;
+      setShowScrollTop(window.scrollY > halfway);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="min-h-screen bg-black w-full flex flex-col justify-between">
+    <div className="min-h-screen bg-black w-full flex flex-col justify-between relative">
       {/* Top Section */}
       <div className="w-full text-center px-4 pt-32 pb-10">
         <p className="font-bold text-2xl md:text-4xl text-white">
@@ -42,6 +61,19 @@ export function WorldMapDemo() {
           ]}
         />
       </div>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <motion.button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg text-white"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <ArrowUp size={20} />
+        </motion.button>
+      )}
 
       {/* Footer */}
       <footer className="bg-black border-t border-white/10 py-6">
